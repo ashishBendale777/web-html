@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: red;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        nav {
+            /* background-color: blue; */
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+
+        }
+
+        li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        li:hover {
+            color: yellow;
+            background-color: blue;
+            padding: 3px;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li> <a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>HOME</h1>
+    </section>
+
+    <section id="about">
+        <h1>ABOUT</h1>
+    </section>
+
+    <section id="contact">
+        <h1>Contact</h1>
+    </section>
+</body>
+
+</html>
