@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            /* background-color: green; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .course-section {
+            height: 80%;
+            width: 90%;
+            display: flex;
+            gap: 10px;
+            /* background-color: red; */
+        }
+
+        .course-card-item {
+            height: 80%;
+            /* background-color: red; */
+            flex-grow: 1;
+            border: 8px solid red;
+            /* border-radius: 20px; */
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            border-top-style: dashed;
+            border-right: none;
+            padding: 30px;
+        }
+
+        .course-card-item img {
+            width: 100%;
+            height: 60%;
+        }
+    </style>
+</head>
+
+<div class="course-section">
+    <div class="course-card-item">
+        <img src="./images/ic_html_css.png" alt="html" />
+        <h1>Css</h1>
+    </div>
+
+    <div class="course-card-item">
+        <img src="./images/ic_java.jpg" alt="java" />
+
+        <h1>Java</h1>
+
+        <ul>
+            <li>Best</li>
+            <li>Best</li>
+            <li>Best</li>
+            <li>Best</li>
+        </ul>
+    </div>
+
+    <div class="course-card-item">
+        <img src="./images/ic_js.png" alt="js" />
+
+        <h1>JS</h1>
+    </div>
+
+    <div class="course-card-item">
+        <img src="./images/ic_py.png" alt="py" />
+
+        <h1>Python</h1>
+    </div>
+</div>
+
+<body>
+
+</body>
+
+</html>
