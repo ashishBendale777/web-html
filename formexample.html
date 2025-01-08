@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HTML Form Example</title>
+  <style>
+    input:focus{
+      border: 6px solid red;
+      padding: 3px;
+    }
+
+    input:disabled{
+      background-color: red;
+    }
+
+    input::placeholder{
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h1>HTML Form with All Input Elements</h1>
+  <form action="#" method="post">
+    <!-- Text inputs -->
+    <label for="fname">First Name: </label>
+    <input type="text" id="fname" placeholder="Enter Name" name="firstname"><br><br>
+
+    <label for="password">Password: </label>
+    <input type="password" disabled id="password" name="password"><br><br>
+
+    <label for="email">Email: </label>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="url">URL: </label>
+    <input type="url" id="url" name="url"><br><br>
+
+    <label for="tel">Telephone: </label>
+    <input type="tel" id="tel" name="tel"><br><br>
+
+    <label for="number">Number: </label>
+    <input type="number" id="number" name="number" min="1" max="10"><br><br>
+
+    <label for="range">Range: </label>
+    <input type="range" id="range" name="range" min="1" max="100"><br><br>
+
+    <label for="date">Date: </label>
+    <input type="date" id="date" name="date"><br><br>
+
+    <label for="month">Month: </label>
+    <input type="month" id="month" name="month"><br><br>
+
+    <label for="week">Week: </label>
+    <input type="week" id="week" name="week"><br><br>
+
+    <label for="time">Time: </label>
+    <input type="time" id="time" name="time"><br><br>
+
+    <label for="datetime-local">DateTime-Local: </label>
+    <input type="datetime-local" id="datetime-local" name="datetime-local"><br><br>
+
+    <!-- File upload -->
+    <label for="file">File: </label>
+    <input type="file" id="file" name="file"><br><br>
+
+    <!-- Checkbox -->
+    <label for="checkbox">Checkbox: </label>
+    <input type="checkbox" id="checkbox" name="checkbox"><br><br>
+
+    <!-- Radio -->
+    <label>Gender: </label>
+    <input type="radio" name="gender" id="male" value="Male">
+    <label for="male">Male</label>
+    <input type="radio" name="gender" id="female" value="Female">
+    <label for="female">Female</label><br><br>
+
+    <!-- Color -->
+    <label for="color">Color Picker: </label>
+    <input type="color" id="color" name="color"><br><br>
+
+    <!-- Hidden -->
+    <input type="hidden" id="hidden" name="hidden" value="hiddenValue">
+
+    <!-- Search -->
+    <label for="search">Search: </label>
+    <input type="search" id="search" name="search"><br><br>
+
+    <!-- Submit and Reset -->
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+  </form>
+</body>
+</html>

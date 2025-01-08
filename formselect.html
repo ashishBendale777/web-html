@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Select Elements</title>
+</head>
+<body>
+  <h1>Form with Select Elements</h1>
+  <form action="#" method="post">
+    <!-- Basic Dropdown -->
+    <label for="country">Country: </label>
+    <select id="country" name="country" required>
+      <option value="" disabled selected>Select your country</option>
+      <option value="usa">United States</option>
+      <option value="canada">Canada</option>
+      <option value="uk">United Kingdom</option>
+      <option value="australia">Australia</option>
+    </select><br><br>
+
+    <!-- Multi-Select Dropdown -->
+    <label for="languages">Languages Known: </label>
+    <select id="languages" name="languages" multiple size="5">
+      <option value="english">Sanskrit</option>
+      <option value="english">Marathi</option>
+      <option value="english">Hindi</option>
+      
+      <option value="english">English</option>
+      <option value="spanish">Spanish</option>
+      <option value="french">French</option>
+      <option value="german">German</option>
+    </select><br><br>
+
+    <!-- Grouped Dropdown -->
+    <label for="car">Choose a Car: </label>
+    <select id="car" name="car">
+      <option value="" disabled selected>Select your car</option>
+      <optgroup label="Sedans">
+        <option value="toyota_camry">Toyota Camry</option>
+        <option value="honda_accord">Honda Accord</option>
+      </optgroup>
+      <optgroup label="SUVs">
+        <option value="toyota_rav4">Toyota RAV4</option>
+        <option value="ford_escape">Ford Escape</option>
+      </optgroup>
+    </select><br><br>
+
+    <!-- Dropdown with Preselected Option -->
+    <label for="color">Favorite Color: </label>
+    <select id="color" name="color">
+      <option value="red">Red</option>
+      <option value="blue" selected>Blue</option>
+      <option value="green">Green</option>
+      <option value="yellow">Yellow</option>
+    </select><br><br>
+
+    <!-- Dropdown with Disabled Option -->
+    <label for="browser">Preferred Browser: </label>
+    <select id="browser" name="browser">
+      <option value="chrome">Google Chrome</option>
+      <option value="firefox" disabled>Mozilla Firefox (Unavailable)</option>
+      <option value="safari">Safari</option>
+      <option value="edge">Microsoft Edge</option>
+    </select><br><br>
+
+    <!-- Submit Button -->
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
