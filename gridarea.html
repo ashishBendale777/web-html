@@ -15,11 +15,11 @@
             display: grid;
             gap: 10px;
             grid-template-areas:
-                "header header header"
-                "nav main aside"
-                "footer footer footer";
-            grid-template-rows: auto 1fr auto;
-            grid-template-columns: 200px 1fr 200px;
+                "header header header ads"
+                "nav main aside ads"
+                "nav footer footer ads";
+            grid-template-rows: auto 1fr 100px;
+            grid-template-columns: auto 3fr 1fr 100px;
             height: 100vh;
         }
 
@@ -44,8 +44,20 @@
 
         main {
             grid-area: main;
+            display: grid;
+            gap: 10px;
+            /* grid-template-columns: 2fr 1fr 1fr 1fr; */
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: 1fr 2fr;
             background-color: #ffffff;
             padding: 12px;
+        }
+
+        .g-item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: red;
         }
 
         footer {
@@ -54,16 +66,51 @@
             padding: 12px;
             text-align: center;
         }
+
+        .ads {
+            grid-area: ads;
+            background-color: red;
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <header>Header</header>
         <nav>Sidebar</nav>
         <aside>Aside</aside>
-        <main>Main Content</main>
         <footer>Footer</footer>
+        <main>
+            <div class="g-item">
+                1
+            </div>
+            <div class="g-item">
+                1
+            </div>
+            <div class="g-item">
+                1
+            </div>
+            <div class="g-item">
+                1
+            </div>
+            <div class="g-item">
+                1
+            </div>
+            <div class="g-item">
+                1
+            </div>
+            <div class="g-item">
+                1
+            </div>
+            <div class="g-item">
+                1
+            </div>
+        </main>
+        <header>Header</header>
+        <div class="ads">
+            Ads
+        </div>
+
     </div>
 </body>
 
