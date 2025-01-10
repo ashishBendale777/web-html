@@ -47,13 +47,13 @@
             display: grid;
             gap: 10px;
             /* grid-template-columns: 2fr 1fr 1fr 1fr; */
-            grid-template-columns: repeat(4,1fr);
+            grid-template-columns: repeat(4, 1fr);
             grid-template-rows: 1fr 2fr;
             background-color: #ffffff;
             padding: 12px;
         }
 
-        .g-item{
+        .g-item {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -71,6 +71,28 @@
             grid-area: ads;
             background-color: red;
             text-align: center;
+        }
+
+        @media screen and (orientation: portrait) {
+            .container {
+                grid-template-areas:
+                    "header"
+                    "nav"
+                    "main"
+                    "aside"
+                    "footer";
+                grid-template-columns: 1fr;
+                grid-template-rows: 100px auto 1fr auto auto;
+            }
+
+            .ads {
+                display: none;
+            }
+
+            main {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(8, 300px);
+            }
         }
     </style>
 </head>
