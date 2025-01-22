@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //print Hi 5 times
+        for (let i = 0; i < 5; i++) {
+            //loop body
+            console.log("Hi", i);
+        }
+
+
+        let iteration = 0
+        do {
+            //loop body
+            console.log("Hello..", iteration);
+            iteration++
+        } while (iteration < 5);
+
+
+        let step = 10
+        while (step >= 0) {
+            //loop body
+            console.log("Hi Hello..", step);
+            step--
+        }
+
+
+        //if...else
+        let prathamMarks = 65
+
+        if (prathamMarks < 0 || prathamMarks > 100) {
+            console.log("Invalid marks");
+        } else {
+            if (prathamMarks < 35) {
+                //if block
+                console.log("Sorry uou are fail");
+            } else if (prathamMarks > 35 && prathamMarks < 50) {
+                //else block
+                console.log("You are passed");
+            } else if (prathamMarks >= 50 && prathamMarks < 60) {
+                console.log("you are ppass with Second class");
+            } else if (prathamMarks >= 60 && prathamMarks < 75) {
+                console.log("You are pass with first class");
+            } else {
+                console.log("you are pass with distinction");
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
