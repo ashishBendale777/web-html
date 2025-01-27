@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let para = "i am sorry.i am hanppy.i am nice"
+        let finalResukt = ""
+        let sentences = para.split(".")
+        console.log(sentences);
+        for (let i = 0; i < sentences.length; i++) {
+            let words = sentences[i].split(" ")
+            let lastWord = words[words.length - 1]
+            let capWord = lastWord.replace(lastWord.charAt(0), lastWord.charAt(0).toUpperCase())
+            finalResukt += sentences[i].replace(lastWord, capWord)
+        }
+        console.log(finalResukt);
+
+
+    </script>
+</body>
+
+</html>
