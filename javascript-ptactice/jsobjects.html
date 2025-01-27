@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let a = 212
+        let names = ["Ashish", "sam"]
+
+        let ciity = "Bsl"
+
+        let studernt = {
+            stdName: "Ashish",
+            stdRollNo: 32,
+            stdMarks: 65
+        }
+
+        console.log(studernt.stdName);
+        console.log(studernt["stdName"]);
+
+        //changing valu of object properties
+        studernt["stdName"] = "Sam"
+        studernt.stdMarks = 43
+
+        console.log(studernt.stdName);
+
+        let data = {
+            1: "AShuish",
+            2: "Sam",
+            3: "Sarvesh"
+        }
+
+        console.log(data);
+        console.log(data[1]);
+
+        let stiudentData = [{}, {}, {}, {}]
+
+        const students = [
+            { id: 1, name: "Aarav Sharma", age: 20, grade: "A", city: "Delhi" },
+            { id: 2, name: "Ananya Gupta", age: 19, grade: "B", city: "Mumbai" },
+            { id: 3, name: "Rohan Mehta", age: 21, grade: "A", city: "Bangalore" },
+            { id: 4, name: "Ishita Jain", age: 18, grade: "A", city: "Pune" },
+            { id: 5, name: "Aryan Verma", age: 20, grade: "B", city: "Chennai" },
+            { id: 6, name: "Nisha Iyer", age: 22, grade: "C", city: "Hyderabad" },
+            { id: 7, name: "Kartik Singh", age: 19, grade: "A", city: "Kolkata" },
+            { id: 8, name: "Simran Kaur", age: 20, grade: "B", city: "Jaipur" },
+            { id: 9, name: "Aditya Pillai", age: 21, grade: "C", city: "Ahmedabad" },
+            { id: 10, name: "Tanya Bose", age: 18, grade: "A", city: "Chandigarh" },
+            { id: 11, name: "Arjun Das", age: 22, grade: "B", city: "Lucknow" },
+            { id: 12, name: "Meera Nair", age: 20, grade: "C", city: "Thiruvananthapuram" },
+            { id: 13, name: "Vikram Rao", age: 21, grade: "A", city: "Patna" },
+            { id: 14, name: "Priya Kulkarni", age: 19, grade: "B", city: "Nagpur" },
+            { id: 15, name: "Siddharth Reddy", age: 20, grade: "C", city: "Visakhapatnam" },
+            { id: 16, name: "Shruti Mishra", age: 18, grade: "A", city: "Indore" },
+            { id: 17, name: "Rahul Bhatt", age: 21, grade: "B", city: "Bhopal" },
+            { id: 18, name: "Pooja Roy", age: 19, grade: "C", city: "Guwahati" },
+            { id: 19, name: "Devansh Malik", age: 20, grade: "A", city: "Ranchi" },
+            { id: 20, name: "Alisha Chawla", age: 22, grade: "B", city: "Surat" }
+        ];
+
+
+        for (let i = 0; i < students.length; i++){
+            let std = students[i]
+            console.log(std.name);
+        }
+
+    </script>
+</body>
+
+</html>
