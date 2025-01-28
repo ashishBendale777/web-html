@@ -52,8 +52,8 @@
         let resultData = students.find((std) => std.id == 43)
         console.log(resultData);
 
-        let resultData2 = students.filter((std) => std.grade == "A" && std.city == "Bangalore")
-        console.log(resultData2);
+        let resultData2 = students.filter((std) => std.grade == "A")
+        console.table(resultData2);
 
         let res = students.some((std) => std.grade != "D")
         console.log(res);
