@@ -12,24 +12,90 @@
 
 
     <script>
-        let todayDate = new Date()
-        console.log("Date",todayDate);
-        console.log("Year",todayDate.getFullYear());
-        console.log("Day",todayDate.getDay());
-        console.log("Month",todayDate.getMonth());
-        console.log("HH",todayDate.getHours());
-        console.log("MM",todayDate.getMinutes());
-        console.log("SS",todayDate.getSeconds());
-        console.log("SS",todayDate.getSeconds());
-        console.log("MSS",todayDate.getMilliseconds());
-        console.log("DATE",todayDate.getDate());
-        console.log("TIME",todayDate.getTime());
-        console.log("UTC DAy",todayDate.getUTCDay());
-        console.log("UTC YEAR",todayDate.getUTCFullYear());
-    
-        
-        let birthDate = new Date("1993-07-16")
-        console.log(birthDate.getMonth());
+        // let todayDate = new Date()
+        // console.log("Date", todayDate);
+        // console.log("Year", todayDate.getFullYear());
+        // console.log("Day", todayDate.getDay());
+        // console.log("Month", todayDate.getMonth());
+        // console.log("HH", todayDate.getHours());
+        // console.log("MM", todayDate.getMinutes());
+        // console.log("SS", todayDate.getSeconds());
+        // console.log("SS", todayDate.getSeconds());
+        // console.log("MSS", todayDate.getMilliseconds());
+        // console.log("DATE", todayDate.getDate());
+        // console.log("TIME", todayDate.getTime());
+        // console.log("UTC DAy", todayDate.getUTCDay());
+        // console.log("UTC YEAR", todayDate.getUTCFullYear());
+
+
+        // let birthDate = new Date("1993-07-16")
+        // console.log(birthDate.getMonth());
+
+        const orders = [
+            { id: 1, name: "Amit Sharma", date: "2024-11-02", product: "Vacuum Cleaner", quantity: 1, totalAmount: 5500 },
+            { id: 2, name: "Sita Patel", date: "2024-11-03", product: "Cleaning Mop", quantity: 2, totalAmount: 800 },
+            { id: 3, name: "Ramesh Gupta", date: "2024-11-05", product: "Dishwasher", quantity: 1, totalAmount: 25000 },
+            { id: 4, name: "Sunita Joshi", date: "2024-11-06", product: "Cleaning Gloves", quantity: 5, totalAmount: 500 },
+            { id: 5, name: "Arjun Mehta", date: "2024-11-08", product: "Floor Cleaner", quantity: 3, totalAmount: 900 },
+            { id: 6, name: "Priya Kapoor", date: "2024-11-10", product: "Air Purifier", quantity: 1, totalAmount: 15000 },
+            { id: 7, name: "Ravi Shankar", date: "2024-11-12", product: "Glass Cleaner", quantity: 2, totalAmount: 400 },
+            { id: 8, name: "Kavita Nair", date: "2024-11-14", product: "Laundry Detergent", quantity: 6, totalAmount: 1800 },
+            { id: 9, name: "Manoj Kumar", date: "2024-11-15", product: "Cleaning Wipes", quantity: 4, totalAmount: 600 },
+            { id: 10, name: "Asha Verma", date: "2024-11-17", product: "Scrub Pads", quantity: 10, totalAmount: 300 },
+            { id: 11, name: "Rahul Malhotra", date: "2024-11-19", product: "Pressure Washer", quantity: 1, totalAmount: 12000 },
+            { id: 12, name: "Neha Arora", date: "2024-11-27", product: "Toilet Cleaner", quantity: 3, totalAmount: 450 },
+            { id: 13, name: "Vikram Singh", date: "2024-11-22", product: "Carpet Shampoo", quantity: 2, totalAmount: 1800 },
+            { id: 14, name: "Meena Pillai", date: "2024-11-23", product: "Dustbin Bags", quantity: 15, totalAmount: 375 },
+            { id: 15, name: "Anil Rao", date: "2024-11-25", product: "Ironing Board", quantity: 1, totalAmount: 3200 },
+            { id: 16, name: "Deepika Reddy", date: "2024-11-26", product: "Fabric Softener", quantity: 2, totalAmount: 400 },
+            { id: 17, name: "Sanjay Mishra", date: "2024-11-28", product: "Water Filter", quantity: 1, totalAmount: 2500 },
+            { id: 18, name: "Geeta Desai", date: "2024-11-29", product: "Drain Cleaner", quantity: 3, totalAmount: 750 },
+            { id: 19, name: "Nitin Bhat", date: "2024-12-01", product: "Dusting Cloths", quantity: 12, totalAmount: 600 },
+            { id: 20, name: "Rekha Menon", date: "2024-12-02", product: "Broom", quantity: 3, totalAmount: 450 },
+            { id: 21, name: "Ajay Pandey", date: "2024-12-04", product: "Vacuum Bags", quantity: 5, totalAmount: 1250 },
+            { id: 22, name: "Swati Saxena", date: "2024-12-06", product: "Dish Soap", quantity: 4, totalAmount: 240 },
+            { id: 23, name: "Rajiv Ghosh", date: "2024-12-08", product: "Microfiber Towels", quantity: 8, totalAmount: 1600 },
+            { id: 24, name: "Kiran Jain", date: "2024-12-10", product: "Kitchen Towels", quantity: 6, totalAmount: 900 },
+            { id: 25, name: "Pooja Yadav", date: "2024-12-12", product: "Floor Duster", quantity: 3, totalAmount: 300 },
+            { id: 26, name: "Suraj Thakur", date: "2024-12-14", product: "Steam Cleaner", quantity: 1, totalAmount: 9000 },
+            { id: 27, name: "Sheetal Kulkarni", date: "2024-12-15", product: "Squeegee", quantity: 2, totalAmount: 300 },
+            { id: 28, name: "Karthik Iyer", date: "2024-12-16", product: "Iron Cleaner", quantity: 1, totalAmount: 500 },
+            { id: 29, name: "Vinita Nanda", date: "2024-12-17", product: "Washing Machine Cleaner", quantity: 2, totalAmount: 700 },
+            { id: 30, name: "Nisha Ahuja", date: "2024-12-19", product: "Glass Cleaner", quantity: 4, totalAmount: 800 },
+            { id: 31, name: "Vijay Prasad", date: "2024-12-21", product: "Sanitizer", quantity: 10, totalAmount: 1500 },
+            { id: 32, name: "Lakshmi Srinivasan", date: "2024-12-22", product: "Lint Roller", quantity: 3, totalAmount: 600 },
+            { id: 33, name: "Omkar Shetty", date: "2024-12-23", product: "Garbage Cans", quantity: 2, totalAmount: 1800 },
+            { id: 34, name: "Juhi Rawat", date: "2024-12-24", product: "Stain Remover", quantity: 3, totalAmount: 750 },
+            { id: 35, name: "Rohit Bhardwaj", date: "2024-12-25", product: "Kitchen Sponges", quantity: 10, totalAmount: 300 },
+            { id: 36, name: "Naina Kaur", date: "2024-12-26", product: "Ceiling Duster", quantity: 1, totalAmount: 800 },
+            { id: 37, name: "Arvind Nair", date: "2024-12-27", product: "Dustpan", quantity: 3, totalAmount: 450 },
+            { id: 38, name: "Sneha Agrawal", date: "2024-12-28", product: "Disinfectant Spray", quantity: 4, totalAmount: 1200 },
+            { id: 39, name: "Tarun Sinha", date: "2024-12-29", product: "Cleaning Trolley", quantity: 1, totalAmount: 4000 },
+            { id: 40, name: "Ishita Dutta", date: "2024-12-30", product: "Laundry Bags", quantity: 5, totalAmount: 1000 },
+            { id: 41, name: "Vivek Chawla", date: "2024-12-31", product: "Soap Dispenser", quantity: 3, totalAmount: 900 },
+            { id: 42, name: "Tanvi Dubey", date: "2024-11-07", product: "Car Cleaning Kit", quantity: 2, totalAmount: 2500 },
+            { id: 43, name: "Harsh Vardhan", date: "2024-11-13", product: "Cleaning Brush Set", quantity: 3, totalAmount: 1500 },
+            { id: 44, name: "Mehul Shah", date: "2024-11-18", product: "Dish Drying Rack", quantity: 1, totalAmount: 1800 },
+            { id: 45, name: "Sakshi Kaul", date: "2024-12-03", product: "Toilet Brush", quantity: 2, totalAmount: 400 },
+            { id: 46, name: "Naveen Chaudhary", date: "2024-12-05", product: "Oven Cleaner", quantity: 1, totalAmount: 600 },
+            { id: 47, name: "Rajesh Pillai", date: "2024-12-07", product: "Furniture Polish", quantity: 1, totalAmount: 700 },
+            { id: 48, name: "Mona Lamba", date: "2024-12-11", product: "Tile Cleaner", quantity: 3, totalAmount: 900 },
+            { id: 49, name: "Abhay Dixit", date: "2024-12-13", product: "Sofa Shampoo", quantity: 1, totalAmount: 2000 },
+            { id: 50, name: "Preeti Jindal", date: "2024-12-27", product: "Mattress Cleaner", quantity: 1, totalAmount: 3000 },
+        ];
+
+        let queryData = new Date("2024-11-23")
+        let filterResult = orders.filter((order) => (new Date(order.date).getDate() == queryData.getDate()) && (new Date(order.date).getMonth() == queryData.getMonth()))
+
+        let filterResult2 = orders.filter((order) => new Date(order.date).getMonth() != 10)
+
+        console.log("DATA", filterResult2);
+
+        console.log("ORDERS", filterResult);
+
+        let cDate = new Date()
+        console.log(cDate.getDate());
+        console.log(typeof (cDate.getDate()));
     </script>
 </body>
 
