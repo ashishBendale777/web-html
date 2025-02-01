@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+        let bankSystem = {
+            name: "Technoweit Finance Services",
+            IFSCCode: "TECHNO1234",
+            address: "Prabhat Colony",
+            customers: [
+                {
+                    name: "Ravi Kumar",
+                    address: "123 MG Road, Bangalore, Karnataka",
+                    aadharNo: "1234-5678-9012",
+                    panNo: "ABCDE1234F",
+                    bankAccount: {
+                        accountNumber: "123456789012",
+                        ifscCode: "SBIN0001234",
+                        bankName: "State Bank of India"
+                    }
+                },
+                {
+                    name: "Anita Sharma",
+                    address: "45 Park Street, Kolkata, West Bengal",
+                    aadharNo: "2345-6789-0123",
+                    panNo: "FGHIJ5678K",
+                    bankAccount: {
+                        accountNumber: "234567890123",
+                        ifscCode: "HDFC0005678",
+                        bankName: "HDFC Bank"
+                    }
+                },
+                {
+                    name: "Vikram Singh",
+                    address: "678 Nehru Nagar, Jaipur, Rajasthan",
+                    aadharNo: "3456-7890-1234",
+                    panNo: "KLMNO9012P",
+                    bankAccount: {
+                        accountNumber: "345678901234",
+                        ifscCode: "ICIC0006789",
+                        bankName: "ICICI Bank"
+                    }
+                },
+                {
+                    name: "Priya Desai",
+                    address: "89 Marine Drive, Mumbai, Maharashtra",
+                    aadharNo: "4567-8901-2345",
+                    panNo: "QRSTU3456V",
+                    bankAccount: {
+                        accountNumber: "456789012345",
+                        ifscCode: "AXIS0007890",
+                        bankName: "Axis Bank"
+                    }
+                },
+                {
+                    name: "Arjun Mehta",
+                    address: "12 Sector 15, Chandigarh",
+                    aadharNo: "5678-9012-3456",
+                    panNo: "VWXYZ6789X",
+                    bankAccount: {
+                        accountNumber: "567890123456",
+                        ifscCode: "PNB0008901",
+                        bankName: "Punjab National Bank"
+                    }
+                }
+            ],
+            employees: [
+                {
+                    name: "Rajesh Verma",
+                    employeeId: "EMP1001",
+                    designation: "Branch Manager",
+                    branch: "State Bank of India, Connaught Place, Delhi",
+                    contactDetails: {
+                        phone: "+91-9876543210",
+                        email: "rajesh.verma@sbi.co.in"
+                    }
+                },
+                {
+                    name: "Sneha Patel",
+                    employeeId: "EMP1002",
+                    designation: "Assistant Manager",
+                    branch: "HDFC Bank, Andheri East, Mumbai",
+                    contactDetails: {
+                        phone: "+91-9123456789",
+                        email: "sneha.patel@hdfcbank.com"
+                    }
+                },
+                {
+                    name: "Amit Sharma",
+                    employeeId: "EMP1003",
+                    designation: "Loan Officer",
+                    branch: "ICICI Bank, Banjara Hills, Hyderabad",
+                    contactDetails: {
+                        phone: "+91-9988776655",
+                        email: "amit.sharma@icicibank.com"
+                    }
+                },
+                {
+                    name: "Pooja Iyer",
+                    employeeId: "EMP1004",
+                    designation: "Customer Service Executive",
+                    branch: "Axis Bank, T. Nagar, Chennai",
+                    contactDetails: {
+                        phone: "+91-9090909090",
+                        email: "pooja.iyer@axisbank.com"
+                    }
+                },
+                {
+                    name: "Vikram Singh",
+                    employeeId: "EMP1005",
+                    designation: "Cashier",
+                    branch: "Punjab National Bank, Sector 17, Chandigarh",
+                    contactDetails: {
+                        phone: "+91-9871234567",
+                        email: "vikram.singh@pnb.co.in"
+                    }
+                }
+            ],
+            getEmployees: () => {
+                console.table(bankSystem.employees);
+            },
+            getCustomers: () => {
+                console.table("Customers", bankSystem.customers);
+            },
+            wuthdrawal: () => { },
+            deposite: () => { }
+        }
+
+        bankSystem.getEmployees()
+        bankSystem.getCustomers()
+    </script>
+</body>
+
+</html>
