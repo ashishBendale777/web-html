@@ -131,11 +131,16 @@
                 console.table("Customers", bankSystem.customers);
             },
             wuthdrawal: () => { },
-            deposite: () => { }
+            deposite: () => { },
+            checckBalance: (accNo) => {
+                let cData = bankSystem.customers.find((cust) => cust.bankAccount.accountNumber == accNo)
+                console.log("NAME", cData.bankAccount.bankName);
+            }
         }
 
         bankSystem.getEmployees()
         bankSystem.getCustomers()
+        bankSystem.checckBalance("234567890123-")
     </script>
 </body>
 

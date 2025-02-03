@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let friemds = ["lata", "rafi", "kishor"]
+        let nums = [423, 54, 544, 5, 4, 54, 545]
+        let employees = [{
+            empname: "Ashish",
+            empSalary: 4234
+        },
+        {
+            empname: "Sam",
+            empSalary: 44334
+        },
+        {
+            empname: "Asish",
+            empSalary: 4433424
+        }]
+
+        let prodData = {
+            prodName: "laptoo",
+            price: 34,
+            compoany: "dELL"
+        }
+
+        for (const empData of employees) {
+            // for (const key in empData) {
+            //     console.log(empData[key]);
+            // }
+            console.log(empData.empname);
+            console.log(empData.empSalary);
+        }
+
+        // for (const frienName of friemds) {
+        //     console.log(frienName);
+        // }
+
+        for (const frienName of friemds) {
+            for (const key in frienName) {
+                console.log(key, frienName[key]);
+            }
+        }
+
+        for (const emp of employees) {
+            // console.log(prodData[props]);
+            if (emp.empSalary > 5000) {
+                emp.department = "IT"
+            } else {
+                emp.department = "Sales"
+            }
+        }
+
+        console.table(employees);
+
+
+        nums.forEach((n) => console.log(n))
+        employees.forEach((emp) => console.log(emp))
+    </script>
+</body>
+
+</html>
