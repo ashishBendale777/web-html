@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //callback funcctions 
+
+        // let add = (a, b) => a + b
+
+        // add(123, 32)
+        // add("AShu", "Sam")
+
+        // add([], [])
+        // add({}, {})
+
+        // add(() => { }, () => { }, () => { })
+
+
+        function step1(nextStep) {
+            console.log("Step 1 Started");
+            setTimeout(() => {
+                console.log("Step 1 Complete");
+                nextStep()
+            }, 2000)
+        }
+
+        function step2(nextStep) {
+            console.log("Step 2 started");
+            setTimeout(() => {
+                console.log("Step 2 Complete");
+                nextStep()
+            }, 2000)
+        }
+
+        function step3() {
+            console.log("Step 3 started");
+            setTimeout(() => {
+                console.log("Step 3 Complete");
+            }, 2000)
+        }
+
+
+        step1(() => {
+            step2(() => {
+                step3()
+            })
+        })
+        // step2()
+        // step3()
+    </script>
+</body>
+
+</html>

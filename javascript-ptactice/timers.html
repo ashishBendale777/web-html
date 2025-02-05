@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //timer functions
+        // setTimeout(() => {
+        //     console.log("Timer Completed");
+        // }, 4000)
+
+        // setTimeout(() => {
+        //     console.log("Timer 2 Completed");
+        // }, 6000)
+
+        // setTimeout(() => {
+        //     console.log("Timer 3 Completed");
+        // }, 3000)
+
+
+        //set interval
+        let intervalID = setInterval(() => {
+            console.log("Running..");
+        }, 4000)
+        console.log("ID", intervalID);
+
+        let intervalID2 = setInterval(() => {
+            console.log("Running 2..");
+        }, 2000)
+        console.log("ID2", intervalID2);
+
+        setTimeout(() => {
+            clearInterval(intervalID)
+        }, 10000)
+
+        setTimeout(() => {
+            clearInterval(intervalID2)
+        }, 20000)
+    </script>
+</body>
+
+</html>
