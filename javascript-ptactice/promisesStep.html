@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //JS Promises
+
+        //defining a promise
+        function checkAge(age) {
+            let checkAgePromise = new Promise((resolve, reject) => {
+                console.log("Checking.....");
+                setTimeout(() => {
+                    if (age < 18) {
+                        reject(new Error("Age should be gt 18"))
+                    }
+                    resolve("Checking Pass")
+
+                }, 3000)
+            })
+            return checkAgePromise
+        }
+
+
+
+        //execution of peomise
+        checkAge(34).then((result) => {
+            console.log(result);
+        }).catch((error) => {
+            console.log(error);
+        }).finally(() => {
+            console.log("DONE");
+        })
+    </script>
+</body>
+
+</html>

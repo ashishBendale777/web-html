@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Java Script Exception Handling
+
+        let divide = (a, b) => {
+            if (b == 0) {
+                throw new Error(a + " Not divisible by " + b)
+            }
+            return a / b
+        }
+
+        try {
+            console.log(divide(20, 10));
+        } catch (error) {
+            console.log("ERROR", error);
+        } finally {
+            console.log("All Done");
+        }
+
+
+        let checkAge = (age) => {
+            if (age < 18) {
+                throw new Error("Age should be gt 18")
+            }
+            return true
+        }
+
+        try {
+            console.log(checkAge(12));
+        } catch (error) {
+            console.log(error);
+        } finally {
+            console.log("Checking Done");
+        }
+    </script>
+</body>
+
+</html>
