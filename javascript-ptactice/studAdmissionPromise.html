@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        let studnetData = {}
+
+        let studentsList = []
+
+        //1 admission form filling
+        function fillForm(stuName, studMob, stuCourse) {
+            console.log("Form filling Started");
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    studnetData = { stuName, stuCourse, studMob }
+                    resolve(studnetData)
+                    console.log("form filling Complete");
+                }, 2000)
+            })
+
+        }
+
+        //2 document varification
+        function varifyDocs(stuInfo, documentList) {
+            console.log("varification Started");
+
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    stuInfo.documents = documentList
+                    console.log("varification Complete");
+                    resolve(stuInfo)
+                }, 2000)
+            })
+
+        }
+
+
+
+        fillForm("Ashush", 34534534, "MCA")
+            .then((result) => {
+                console.log(result);
+                varifyDocs(result, ["natinality", "cast validity"])
+                    .then((result2) => {
+                        console.log(result2);
+                    })
+            }).catch((error) => console.log(error))
+    
+    
+        // Promise.all([fillForm("Chill",111111,"mca"),varifyDocs])
+    </script>
+</body>
+
+</html>

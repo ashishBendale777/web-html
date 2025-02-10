@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const step1 = new Promise((resolve) => setTimeout(() => resolve("Step 1 resolved"), 5000));
+        const step2 = new Promise((resolve) => setTimeout(() => resolve("Step 2 resolved"), 500));
+        const step3 = new Promise((resolve) => setTimeout(() => resolve("Step 3 resolved"), 300));
+
+        
+        // Promise.all([step2, step3, step1])
+        //     .then(results => console.log("All promises resolved:", results))
+        //     .catch(error => console.error("One of the promises failed:", error));
+
+        Promise.race([step2, step3, step1])
+            .then(result => console.log("Fastest promise resolved:", result))
+            .catch(error => console.error("Fastest promise rejected:", error));
+
+    </script>
+</body>
+
+</html>
