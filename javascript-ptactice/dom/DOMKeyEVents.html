@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+        }
+
+        .box {
+            height: 300px;
+            width: 300px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="message"></p>
+    <div class="box" id="box">
+
+    </div>
+    <script>
+        // keydown/keyup event
+        let positionX = 0
+        let positionY = 0
+        let box = document.getElementById("box")
+        let message = document.getElementById("message")
+
+        // document.addEventListener("keyup", (event) => {
+        //     if (event.key == 'ArrowDown') {
+        //         positionY += 10
+        //     }
+        //     if (event.key == "ArrowUp") {
+        //         positionY -= 10
+        //     }
+        //     if (event.key == "ArrowLeft") {
+        //         positionX -= 10
+        //     }
+        //     if (event.key == "ArrowRight") {
+        //         positionX += 10
+        //     }
+        //     if (event.key == "Enter") {
+        //         positionX = 0
+        //         positionY = 0
+        //     }
+        //     box.style.transform = `translate(${positionX}px,${positionY}px)`
+        // })
+
+        document.addEventListener("keydown", (event) => {
+            message.textContent += event.key
+        })
+    </script>
+</body>
+
+</html>
