@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //rest or spread operators and destructuring    
+        let friends = ["Ashi", "Sam", "Pawan", "Amol"]
+        let newfriends = ["Sarveh", "Bhushan"]
+
+        let allFriends = [...friends, ...newfriends]
+
+        //array destructuring
+        let [a, b, ...others] = friends
+        console.log(a);
+        console.log(b);
+        console.log(others);
+        console.log(allFriends);
+
+        //define function
+        let multiplier = (num, ...numbers) => {
+            console.log(num);
+            console.log(numbers);
+            let ans = 0
+            numbers.forEach((n) => {
+                ans += n * num
+            })
+            console.log("Final", ans);
+        }
+
+        //function calling
+        multiplier(12, 54, 76, 34, 65, 76, 34)
+
+
+        //object destructuring
+        let studs = {
+            sName: "Sam",
+            sAge: 43,
+            sMarks: 65
+        }
+        let { sAge, sName } = studs
+        console.log(sName);
+
+        console.log(studs);
+    </script>
+</body>
+
+</html>
